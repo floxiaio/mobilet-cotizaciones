@@ -1,0 +1,14 @@
+{
+  "name": "mobilet-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page para Mobilet, empresa de renta de baños portátiles.",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "author": "Mobilet",
+  "license": "ISC"
+}

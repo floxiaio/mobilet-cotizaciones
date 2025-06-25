@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilet - Renta de Baños Portátiles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Mobilet Logo" class="logo">
+        <h1>Renta de Baños Portátiles</h1>
+    </header>
+    <main>
+        <section id="cta">
+            <h2>¡Cotiza Ahora!</h2>
+            <form id="quote-form" action="/quote" method="post">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Teléfono" required>
+                <select name="event_type" required>
+                    <option value="">Tipo de Evento</option>
+                    <option value="concierto">Concierto</option>
+                    <option value="boda">Boda</option>
+                    <option value="festival">Festival</option>
+                </select>
+                <input type="date" name="date" required>
+                <input type="text" name="location" placeholder="Ubicación" required>
+                <input type="number" name="quantity" placeholder="Cantidad de Baños" required>
+                <button type="submit">Enviar Cotización</button>
+            </form>
+        </section>
+        <section id="map">
+            <h2>Selecciona tu Ubicación</h2>
+            <div id="map-canvas"></div>
+        </section>
+        <section id="process">
+            <h2>Pasos del Proceso de Renta</h2>
+            <ol>
+                <li>Contáctanos para una cotización.</li>
+                <li>Confirma tu pedido.</li>
+                <li>Recibe los baños portátiles en tu evento.</li>
+            </ol>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:contacto@mobilet.com">contacto@mobilet.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/1234567890">1234567890</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mobilet. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+# No se requiere backend en este momento, pero si se necesita, se puede agregar Flask o Django aquí.
